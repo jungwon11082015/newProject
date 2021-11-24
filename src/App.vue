@@ -1,21 +1,35 @@
 <template>
   <div id="app">
-     <Header/>
+    <Header  v-if="LoadingCheck" />
     <router-view/>
-    <Footer/>
+    <Footer  v-if="LoadingCheck" />
   </div>
 </template>
 
 <script>
+import EventBus from '@/utils/EventBus';
+
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 export default {
   name: 'App',
   components: {
-    Header,
+    Header, 
     Footer
+  },
+
+  data(){
+     return{
+        LoadingCheck: false,
+      }
+  },
+   created(){
+      EventBus.$on('Loading-end', (payload)=>{
+          this.LoadingCheck = payload; 
+          console.log( this.LoadingCheck);
+      });
   }
-}
+} 
 </script>
 
 <style lang="scss">
