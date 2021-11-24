@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <footer>
     <p>푸터컴포넌트</p>
-  </div>
+  </footer>
 </template>
 
 <script>

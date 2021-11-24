@@ -20,6 +20,7 @@ export default {
 
 <style lang="scss">
 @import '@/assets/scss/_reset.scss';  
+
 #app { 
   margin:0; padding:0;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

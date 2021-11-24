@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <header>
     <p>헤더컴포넌트</p>
-  </div>
+  </header>
 </template>
 
 <script>
@@ -9,7 +9,6 @@ export default {
   name: 'Header',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
     }
   }
 }
